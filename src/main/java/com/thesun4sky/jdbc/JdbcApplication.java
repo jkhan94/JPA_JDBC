@@ -24,13 +24,15 @@ public class JdbcApplication {
 				// 테이블 생성
 				String creatSql = "CREATE TABLE USERS (id SERIAL, username varchar(255))";
 				try (PreparedStatement statement = connection.prepareStatement(creatSql)) {
-					statement.execute();
+						statement.execute();
 				}
 
 				// 데이터 추가
 				String insertSql = "INSERT INTO USERS (username) VALUES ('teasun kim')";
 				try (PreparedStatement statement = connection.prepareStatement(insertSql)) {
-					statement.execute();
+					for(int i = 1; i < 11; i++) {
+						statement.execute();
+					}
 				}
 
 				// 데이터 조회
