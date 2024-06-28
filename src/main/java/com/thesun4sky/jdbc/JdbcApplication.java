@@ -15,7 +15,7 @@ public class JdbcApplication {
 		// 테이블 생성
 		repository.createTable();
 		// 유저정보 추가
-		repository.insertUser("Teasun Kim");
+		repository.insertUser("Teasun Kim1");
 		// 유저정보 조회
 		System.out.println("User Name: " + repository.findUserNameById(1L));
 	}
